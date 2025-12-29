@@ -118,3 +118,37 @@ window.addEventListener('scroll', () => {
       openModal(imgSrc);
     });
   });
+
+
+
+
+
+
+
+// Typing effect
+     const texts = [
+    " I am a UI/UX Designer & Frontend Developer",
+    "and a Graphic Designer"
+  ];
+
+  const typing = document.getElementById("typing");
+  let textIndex = 0;
+  let charIndex = 0;
+
+  function typeEffect() {
+    typing.textContent = texts[textIndex].substring(0, charIndex);
+    charIndex++;
+
+    if (charIndex > texts[textIndex].length) {
+      setTimeout(() => {
+        charIndex = 0;
+        textIndex = (textIndex + 1) % texts.length;
+        typing.textContent = "";
+        typeEffect(); // start next text immediately
+      }, 1000); // wait before next text
+    } else {
+      setTimeout(typeEffect, 120);
+    }
+  }
+
+  typeEffect();
