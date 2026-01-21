@@ -2,7 +2,7 @@ const filterBtns = document.querySelectorAll(".filter-btn");
 const projects = document.querySelectorAll(".project-card");
 const seeMoreBtn = document.getElementById("seeMoreBtn");
 const seeLessBtn = document.getElementById("seeLessBtn");
-let visibleCount = 9;
+let visibleCount = 11;
 
 // Initial: show first 6
 projects.forEach((card, index) => {
@@ -152,3 +152,6 @@ window.addEventListener('scroll', () => {
   }
 
   typeEffect();
+
+
+  
